@@ -103,7 +103,7 @@ export function ContactForm() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Phone</h4>
-                    <p className="text-muted-foreground">+254 712 345 678</p>
+                    <p className="text-muted-foreground">+254 712 747 114</p>
                   </div>
                 </div>
                 

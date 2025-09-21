@@ -15,7 +15,7 @@ export function Footer() {
                 <span className="font-heading text-xl font-bold text-white">G</span>
               </div>
               <span className="font-heading text-2xl font-bold gradient-text-primary">
-                Gotendia Restaurant Consultants
+                Restaurant Consultants
               </span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
@@ -75,7 +75,7 @@ export function Footer() {
                     href="mailto:hello@gotendia.com" 
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
-                    hello@gotendia.com
+                    Coming Soon
                   </a>
                 </div>
               </li>
@@ -84,10 +84,10 @@ export function Footer() {
                 <div>
                   <div className="text-sm font-medium">Phone</div>
                   <a 
-                    href="tel:+254700123456" 
+                    href="tel:+254712747114" 
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +254 700 123 456
+                    +254 712 747 114
                   </a>
                 </div>
               </li>
@@ -133,7 +133,7 @@ export function Footer() {
         <div className="border-t border-border py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024 Gotendia Restaurant Consultants. All rights reserved.
+              © 2025 Restaurant Consultants. All rights reserved.
             </div>
             <div className="flex space-x-6">
               <a 

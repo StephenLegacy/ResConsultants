@@ -15,7 +15,7 @@ export function Hero() {
         <div className="mx-auto max-w-4xl text-center">
           {/* Hero Badge */}
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-8 animate-fade-in">
-            ✨ Trusted by 200+ Restaurants Worldwide
+            ✨ Trusted by 80+ Restaurants Worldwide
           </div>
 
           {/* Main Headline */}
@@ -55,7 +55,7 @@ export function Hero() {
               className="border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all duration-300 px-8 py-4 text-lg font-medium group"
             >
               <Play className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
-              Watch Our 90s Overview
+              Watch Our  Overview
             </Button>
           </div>
 
@@ -66,12 +66,13 @@ export function Hero() {
             </p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
               {/* Placeholder for client logos - will be replaced with actual logos */}
-              {Array.from({ length: 5 }).map((_, i) => (
+              {Array.from({ length: 1 }).map((_, i) => (
                 <div 
                   key={i} 
                   className="h-8 w-24 bg-muted rounded-md flex items-center justify-center text-xs font-medium text-muted-foreground"
                 >
-                  Brand {i + 1}
+                  {/* Brand {i + 1} */}
+                  Our Power Brands Are Loading...Check Back Soon!
                 </div>
               ))}
             </div>
