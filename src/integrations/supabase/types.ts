@@ -14,7 +14,300 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      blog_posts: {
+        Row: {
+          author_id: string
+          content: string
+          created_at: string
+          excerpt: string | null
+          featured: boolean
+          id: string
+          published: boolean
+          published_at: string | null
+          reading_time: number | null
+          slug: string
+          tags: string[] | null
+          thumbnail_url: string | null
+          title: string
+          topic: string | null
+          updated_at: string
+          video_duration: number | null
+          video_url: string | null
+        }
+        Insert: {
+          author_id: string
+          content: string
+          created_at?: string
+          excerpt?: string | null
+          featured?: boolean
+          id?: string
+          published?: boolean
+          published_at?: string | null
+          reading_time?: number | null
+          slug: string
+          tags?: string[] | null
+          thumbnail_url?: string | null
+          title: string
+          topic?: string | null
+          updated_at?: string
+          video_duration?: number | null
+          video_url?: string | null
+        }
+        Update: {
+          author_id?: string
+          content?: string
+          created_at?: string
+          excerpt?: string | null
+          featured?: boolean
+          id?: string
+          published?: boolean
+          published_at?: string | null
+          reading_time?: number | null
+          slug?: string
+          tags?: string[] | null
+          thumbnail_url?: string | null
+          title?: string
+          topic?: string | null
+          updated_at?: string
+          video_duration?: number | null
+          video_url?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "blog_posts_author_id_fkey"
+            columns: ["author_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      case_studies: {
+        Row: {
+          approach: string
+          challenge: string
+          client_id: string | null
+          created_at: string
+          gallery_images: string[] | null
+          hero_image_url: string | null
+          id: string
+          metrics: Json | null
+          published: boolean
+          results: Json | null
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          approach: string
+          challenge: string
+          client_id?: string | null
+          created_at?: string
+          gallery_images?: string[] | null
+          hero_image_url?: string | null
+          id?: string
+          metrics?: Json | null
+          published?: boolean
+          results?: Json | null
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          approach?: string
+          challenge?: string
+          client_id?: string | null
+          created_at?: string
+          gallery_images?: string[] | null
+          hero_image_url?: string | null
+          id?: string
+          metrics?: Json | null
+          published?: boolean
+          results?: Json | null
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "case_studies_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "clients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      clients: {
+        Row: {
+          created_at: string
+          display_order: number
+          id: string
+          industry: string | null
+          logo_url: string | null
+          name: string
+          published: boolean
+          testimonial: string | null
+          updated_at: string
+          website_url: string | null
+        }
+        Insert: {
+          created_at?: string
+          display_order?: number
+          id?: string
+          industry?: string | null
+          logo_url?: string | null
+          name: string
+          published?: boolean
+          testimonial?: string | null
+          updated_at?: string
+          website_url?: string | null
+        }
+        Update: {
+          created_at?: string
+          display_order?: number
+          id?: string
+          industry?: string | null
+          logo_url?: string | null
+          name?: string
+          published?: boolean
+          testimonial?: string | null
+          updated_at?: string
+          website_url?: string | null
+        }
+        Relationships: []
+      }
+      inquiries: {
+        Row: {
+          admin_notes: string | null
+          assigned_to: string | null
+          company: string | null
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          phone: string | null
+          preferred_contact_time: string | null
+          service_interest: Database["public"]["Enums"]["service_type"] | null
+          status: Database["public"]["Enums"]["inquiry_status"]
+          updated_at: string
+        }
+        Insert: {
+          admin_notes?: string | null
+          assigned_to?: string | null
+          company?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          phone?: string | null
+          preferred_contact_time?: string | null
+          service_interest?: Database["public"]["Enums"]["service_type"] | null
+          status?: Database["public"]["Enums"]["inquiry_status"]
+          updated_at?: string
+        }
+        Update: {
+          admin_notes?: string | null
+          assigned_to?: string | null
+          company?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string | null
+          preferred_contact_time?: string | null
+          service_interest?: Database["public"]["Enums"]["service_type"] | null
+          status?: Database["public"]["Enums"]["inquiry_status"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "inquiries_assigned_to_fkey"
+            columns: ["assigned_to"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          full_name: string
+          id: string
+          role: Database["public"]["Enums"]["user_role"]
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name: string
+          id?: string
+          role?: Database["public"]["Enums"]["user_role"]
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name?: string
+          id?: string
+          role?: Database["public"]["Enums"]["user_role"]
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      services: {
+        Row: {
+          created_at: string
+          display_order: number
+          features: string[] | null
+          icon_name: string
+          id: string
+          long_description: string | null
+          published: boolean
+          service_type: Database["public"]["Enums"]["service_type"]
+          short_description: string
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          display_order?: number
+          features?: string[] | null
+          icon_name: string
+          id?: string
+          long_description?: string | null
+          published?: boolean
+          service_type: Database["public"]["Enums"]["service_type"]
+          short_description: string
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          display_order?: number
+          features?: string[] | null
+          icon_name?: string
+          id?: string
+          long_description?: string | null
+          published?: boolean
+          service_type?: Database["public"]["Enums"]["service_type"]
+          short_description?: string
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +316,15 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      inquiry_status: "new" | "in_progress" | "responded" | "closed"
+      service_type:
+        | "concept_development"
+        | "menu_engineering"
+        | "operational_efficiency"
+        | "staff_training"
+        | "marketing_cost_control"
+        | "recruiting"
+      user_role: "admin" | "editor"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +451,17 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      inquiry_status: ["new", "in_progress", "responded", "closed"],
+      service_type: [
+        "concept_development",
+        "menu_engineering",
+        "operational_efficiency",
+        "staff_training",
+        "marketing_cost_control",
+        "recruiting",
+      ],
+      user_role: ["admin", "editor"],
+    },
   },
 } as const
