@@ -26,7 +26,7 @@ export function Header() {
             <span className="font-heading text-lg font-bold text-white">G</span>
           </div>
           <span className="font-heading text-xl font-bold gradient-text-primary">
-            Gotendia
+            Restaurant Consultants
           </span>
         </div>
 

@@ -72,7 +72,7 @@ export function Footer() {
                 <div>
                   <div className="text-sm font-medium">Email</div>
                   <a 
-                    href="mailto:hello@gotendia.com" 
+                    href="mailto:hello@Restaurant Consultants.com" 
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     Coming Soon

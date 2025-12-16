@@ -126,7 +126,7 @@ const Auth = () => {
               <span className="font-heading text-xl font-bold text-white">G</span>
             </div>
             <span className="font-heading text-2xl font-bold gradient-text-primary">
-              Gotendia
+              Restaurant Consultants
             </span>
           </div>
           <h1 className="text-2xl font-heading font-bold">Admin Access</h1>
@@ -154,7 +154,7 @@ const Auth = () => {
                     <Input
                       id="signin-email"
                       type="email"
-                      placeholder="admin@gotendia.com"
+                      placeholder="admin@Restaurant Consultants.com"
                       value={formData.email}
                       onChange={(e) => handleChange('email', e.target.value)}
                       required
@@ -224,7 +224,7 @@ const Auth = () => {
                     <Input
                       id="signup-email"
                       type="email"
-                      placeholder="admin@gotendia.com"
+                      placeholder="admin@Restaurant Consultants.com"
                       value={formData.email}
                       onChange={(e) => handleChange('email', e.target.value)}
                       required
@@ -293,7 +293,7 @@ const Auth = () => {
         <div className="mt-8 text-center">
           <p className="text-sm text-muted-foreground">
             Need help?{" "}
-            <a href="mailto:support@gotendia.com" className="underline hover:text-primary">
+            <a href="mailto:support@Restaurant Consultants.com" className="underline hover:text-primary">
               Contact support
             </a>
           </p>

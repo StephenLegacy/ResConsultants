@@ -113,7 +113,7 @@ export function ContactForm() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-muted-foreground">hello@gotendia.com</p>
+                    <p className="text-muted-foreground">hello@Restaurant Consultants.com</p>
                   </div>
                 </div>
                 
@@ -134,7 +134,7 @@ export function ContactForm() {
 
             <Card className="border-gradient">
               <CardHeader>
-                <CardTitle>Why Choose Gotendia?</CardTitle>
+                <CardTitle>Why Choose Restaurant Consultants?</CardTitle>
                 <CardDescription>
                   Join 200+ successful restaurants that trust us with their growth
                 </CardDescription>

@@ -166,7 +166,7 @@ const Admin = () => {
                 <span className="font-heading text-lg font-bold text-white">G</span>
               </div>
               <span className="font-heading text-xl font-bold gradient-text-primary">
-                Gotendia Admin
+                Restaurant Consultants Admin
               </span>
             </div>
           </div>
